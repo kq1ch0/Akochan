@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>sample1</title>
+</head>
+<body>
+  <form id="form1" action="#">
+    <textarea type="text" id="input_message" value="ここに文章を入力" rows="6" cols="160"></textarea>
+    <input type="button" onclick="func1()" value="ｱｺﾁｬﾝ">
+  </form>
+  <div id="output_message"></div>
+  <script language="javascript" type="text/javascript">
+  function func1() {
+    var input_message = document.getElementById("input_message").value;
+    input_message = input_message.replace(/ネ/g,"ア");
+    input_message = input_message.replace(/ﾈ/g,"ｱ");
+    document.getElementById("output_message").innerHTML = input_message;
+  }
+  </script>
+</body>
+</html>
